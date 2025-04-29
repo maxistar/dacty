@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_left
+    shield: dacty_left
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_right
+    shield: dacty_right
