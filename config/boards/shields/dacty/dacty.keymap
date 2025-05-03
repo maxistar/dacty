@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dacty_macros.h>
 
 // layers
 #define DEFAULT 0
@@ -24,55 +25,6 @@
  */
 
 / {
-
-    macros {
-        cycle_lang_de: cycle_lang_de {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 0>,
-                  <&kp CAPS>;
-        };
-
-        cycle_lang_ru: cycle_lang_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 1>,
-                  <&kp CAPS>;
-        };
-
-        cycle_lang_en: cycle_lang_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 2>,
-                  <&kp CAPS>;
-        };
-
-        altgr_q_for_at: macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk RALT &kp Q>;
-        };
-
-        sh_kp_A: macroSA {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp A>;
-        };
-        sh_kp_B: macroSB {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp A>;
-        };
-        sh_kp_C: macroSC {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp A>;
-        };
-
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -192,12 +144,12 @@
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&kp GRAVE    &kp N1    &altgr_q_for_at &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
-&kp MINUS    &kp Q     &kp W           &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
-&kp SQT      &sh_kp_A  &kp S           &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_en
-&trans       &kp Z     &kp X           &sh_kp_C  &kp V     &sh_kp_B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &trans
-&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
-                                                               &kp LCTRL                  &kp RCTRL    
+&kp GRAVE    &kp N1    &altgr_q_for_at &sh_kp_BSLH &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
+&kp MINUS    &kp Q     &kp W           &kp E       &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
+&kp SQT      &sh_kp_A  &kp S           &kp D       &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_en
+&trans       &kp Z     &kp X           &sh_kp_C    &kp V     &sh_kp_B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &trans
+&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL   &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+                                                             &kp LCTRL                  &kp RCTRL    
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

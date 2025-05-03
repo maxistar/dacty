@@ -1,0 +1,57 @@
+/ {
+
+    macros {
+        cycle_lang_de: cycle_lang_de {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 0>,
+                  <&kp CAPS>;
+        };
+
+        cycle_lang_ru: cycle_lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 1>,
+                  <&kp CAPS>;
+        };
+
+        cycle_lang_en: cycle_lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 2>,
+                  <&kp CAPS>;
+        };
+
+        altgr_q_for_at: macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp Q>;
+        };
+
+        sh_kp_A: macroSA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp A>;
+        };
+        sh_kp_B: macroSB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp A>;
+        };
+        sh_kp_C: macroSC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp A>;
+        };
+        sh_kp_BSLH: macroSC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp BSLH>;
+        };
+
+    };
+
+};
