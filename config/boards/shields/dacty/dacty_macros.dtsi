@@ -46,7 +46,7 @@
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp A>;
         };
-        sh_kp_BSLH: macroSC {
+        sh_kp_BSLH: macroSBSLH {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp BSLH>;
