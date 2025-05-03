@@ -59,7 +59,7 @@
         sh_kp: shift_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <1>;
-            bindings = <&sk LSHIFT>, <&kp>;
+            bindings = <&sk LSHIFT>, <&kp $0>;
         };
 
     };
@@ -182,7 +182,7 @@
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&sh_kp GRAVE    &sh_kp N1    &altgr_q_for_at     &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
+&sh_kp GRAVE    &sh_kp N1    &altgr_q_for_at        &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
 &sh_kp MINUS    &sh_kp Q     &sh_kp W               &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &sh_kp SQT      &sh_kp A     &sh_kp S               &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_en
 &trans          &sh_kp Z     &sh_kp X               &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &trans
