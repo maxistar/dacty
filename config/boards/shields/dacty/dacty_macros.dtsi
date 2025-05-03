@@ -71,6 +71,11 @@
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp H>;
         };
+        sh_kp_I: macroSI {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp I>;
+        };
         sh_kp_J: macroSJ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
