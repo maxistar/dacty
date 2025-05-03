@@ -39,13 +39,44 @@
         sh_kp_B: macroSB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp A>;
+            bindings = <&sk LSHIFT &kp B>;
         };
         sh_kp_C: macroSC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp A>;
+            bindings = <&sk LSHIFT &kp C>;
         };
+        sh_kp_D: macroSD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp D>;
+        };
+        sh_kp_E: macroSE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp E>;
+        };
+        sh_kp_F: macroSF {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp F>;
+        };
+        sh_kp_G: macroSG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp G>;
+        };
+        sh_kp_H: macroSH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp H>;
+        };
+
+
+
+
+
+
         sh_kp_BSLH: macroSBSLH {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
