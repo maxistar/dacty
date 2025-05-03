@@ -62,9 +62,6 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
         triggers-per-rotation = <36>;
     };
 
-};
-
-/ {
   macros {
     cycle_lang_de: macro {
       bindings = <&to default_layer &kp CAPS>; // EN → DE
@@ -78,7 +75,9 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
       bindings = <&to en_layer &kp CAPS>; // RU → EN
     };
   };
+
 };
+
 
 &pro_micro_i2c {
     status = "okay";
