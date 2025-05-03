@@ -51,7 +51,7 @@
         };
 
         altgr_q_for_at: macro {
-            bindings = <&ralt &kp Q>;
+            bindings = <&kp RALT &kp Q>;
         };
     };
 
