@@ -51,6 +51,8 @@
         };
 
         altgr_q_for_at: macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp RALT &kp Q>;
         };
     };
