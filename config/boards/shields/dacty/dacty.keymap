@@ -56,17 +56,17 @@
             bindings = <&sk RALT &kp Q>;
         };
 
-        sh_kp_A: macro {
+        sh_kp_A: macroSA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp A>;
         };
-        sh_kp_B: macro {
+        sh_kp_B: macroSB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp A>;
         };
-        sh_kp_C: macro {
+        sh_kp_C: macroSC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp A>;
