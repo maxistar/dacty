@@ -61,7 +61,7 @@
         morph_de_2_to_at: behavior_mod_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&altgr_q_for_at &kp N2>;  // если Shift, то AltGr+Q, иначе обычная 2
+            bindings = <&kp N2 &altgr_q_for_at>;  // если Shift, то AltGr+Q, иначе обычная 2
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
