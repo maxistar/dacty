@@ -61,27 +61,6 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <36>;
     };
-
-  macros {
-    cycle_lang_de: cycle_lang_de {
-      bindings = <
-        &to default_layer
-        &kp CAPS>; 
-    };
-
-    cycle_lang_ru: cycle_lang_ru {
-      bindings = <
-        &to ru_layer
-        &kp CAPS>;
-    };
-
-    cycle_lang_en: cycle_lang_en {
-      bindings = <
-        &to en_layer
-        &kp CAPS>;
-    };
-  };
-
 };
 
 

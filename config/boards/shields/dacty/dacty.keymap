@@ -18,6 +18,33 @@
  */
 
 / {
+
+    macros {
+        cycle_lang_de: cycle_lang_de {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to default_layer>,
+                  <&kp CAPS>;
+        };
+
+        cycle_lang_ru: cycle_lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to ru_layer>,
+                  <&kp CAPS>;
+        };
+
+        cycle_lang_en: cycle_lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to en_layer>,
+                  <&kp CAPS>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 // DEfault_layer
