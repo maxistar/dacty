@@ -62,6 +62,15 @@
             bindings = <&sk RALT &kp N0>;
         };
 
+        altgr_RBKT: altgr_RBKT
+        {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp RBKT>;
+        };
+
+        //======================================
+
         sh_kp_N1: sh_kp_N1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -264,6 +273,19 @@
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp BSLH>;
         };
+
+        shift_EQUAL: shift_EQUAL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp EQUAL>;
+        };
+
+        shift_FSLH: shift_FSLH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp FSLH>;
+        };
+        
 
     };
 
