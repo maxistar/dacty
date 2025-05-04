@@ -31,10 +31,10 @@
             bindings = <&sk RALT &kp Q>;
         };
 
-        altgr_SQT: altgr_SQT {
+        altgr_MINUS: altgr_MINUS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk RALT &kp SQT>;
+            bindings = <&sk RALT &kp MINUS>;
         };
 
         sh_kp_A: macroSA {
