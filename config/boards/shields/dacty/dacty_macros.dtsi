@@ -292,6 +292,12 @@
             bindings = <&sk LSHIFT &kp BSLH>;
         };
 
+        shift_MINUS: shift_MINUS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp MINUS>;
+        };
+
     };
 
 };
