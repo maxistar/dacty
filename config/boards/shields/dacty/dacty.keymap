@@ -188,7 +188,7 @@
 
             bindings = <
 &kp GRAVE    &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp ESC
-&shift_MINUS &shift_Q  &shift_W &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I  &shift_O &kshift_P &kp TAB
+&shift_MINUS &shift_Q  &shift_W &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I  &shift_O &shift_P &kp TAB
 &shift_SQT   &shift_A  &shift_S &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K  &shift_L &kp SEMI  &cycle_lang_en
 &kp LSHFT    &shift_Z  &shift_X &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
 &kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC  &kp RALT
