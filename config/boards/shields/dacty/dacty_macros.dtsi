@@ -97,6 +97,12 @@
             bindings = <&sk LSHIFT &kp N0>;
         };
 
+        sh_kp_RBKT: sh_kp_RBKT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp RBKT>;
+        };
+
         sh_kp_A: macroSA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
