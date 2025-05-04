@@ -45,7 +45,7 @@
 &kp MINUS    &kp Q     &kp W             &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S             &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_ru
 &mo 5        &kp Z     &kp X             &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo 5
-&kp LALT     &kp LGUI  &kp LBKT          &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT          &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &kp RBKT &kp BSPC &mo 6
                                                              &kp LCTRL                  &kp RCTRL    
             >;
 
@@ -136,7 +136,7 @@
         };
 
 
-        ctrl_layer {
+        german_shift_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
 // |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
@@ -145,18 +145,36 @@
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&kp GRAVE    &kp N1    &altgr_q_for_at &kp BSLH &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
-&kp MINUS    &sh_kp_Q     &sh_kp_W           &sh_kp_E       &sh_kp_R     &sh_kp_T                      &sh_kp_Y     &sh_kp_U     &sh_kp_I     &sh_kp_O    &sh_kp_P    &kp TAB
-&kp SQT      &sh_kp_A  &sh_kp_S           &sh_kp_D       &sh_kp_F     &sh_kp_G                      &sh_kp_H     &sh_kp_J     &sh_kp_K     &sh_kp_L    &kp SEMI &cycle_lang_en
-&trans       &sh_kp_Z     &sh_kp_X           &sh_kp_C    &sh_kp_V     &sh_kp_B                      &sh_kp_N     &sh_kp_M     &kp COMMA &kp DOT  &kp FSLH &trans
-&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL   &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
-                                                             &kp LCTRL                  &kp RCTRL    
+&kp GRAVE    &kp N1    &altgr_q_for_at &kp BSLH  &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
+&kp MINUS    &sh_kp_Q  &sh_kp_W        &sh_kp_E  &sh_kp_R  &sh_kp_T                   &sh_kp_Y  &sh_kp_U  &sh_kp_I  &sh_kp_O &sh_kp_P &kp TAB
+&kp SQT      &sh_kp_A  &sh_kp_S        &sh_kp_D  &sh_kp_F  &sh_kp_G                   &sh_kp_H  &sh_kp_J  &sh_kp_K  &sh_kp_L &kp SEMI &cycle_lang_en
+&trans       &sh_kp_Z  &sh_kp_X        &sh_kp_C  &sh_kp_V  &sh_kp_B                   &sh_kp_N  &sh_kp_M  &kp COMMA &kp DOT  &kp FSLH &trans
+&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+                                                           &kp LCTRL                  &kp RCTRL    
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
+        german_ralt_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
+// |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
+// |  '    |  Ä  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
+// |       |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   |       |
+// | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
+// |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
+            bindings = <
+&kp GRAVE    &kp N1     &kp N2            &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
+&kp MINUS    &kp Q      &kp W             &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
+&kp SQT      &altgr_SQT &kp S             &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp CAPS
+&kp LSHFT    &kp Z      &kp X             &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp LALT     &kp LGUI   &kp LBKT          &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+                                                             &kp LCTRL                  &kp RCTRL      
+            >;
 
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
 
     };
 };
