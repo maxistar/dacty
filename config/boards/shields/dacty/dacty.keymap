@@ -145,11 +145,11 @@
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&kp GRAVE    &kp N1    &altgr_q_for_at &kp BSLH  &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
-&kp MINUS    &sh_kp_Q  &sh_kp_W        &sh_kp_E  &sh_kp_R  &sh_kp_T                   &sh_kp_Y  &sh_kp_U  &sh_kp_I  &sh_kp_O &sh_kp_P &kp TAB
-&kp SQT      &sh_kp_A  &sh_kp_S        &sh_kp_D  &sh_kp_F  &sh_kp_G                   &sh_kp_H  &sh_kp_J  &sh_kp_K  &sh_kp_L &kp SEMI &cycle_lang_en
-&trans       &sh_kp_Z  &sh_kp_X        &sh_kp_C  &sh_kp_V  &sh_kp_B                   &sh_kp_N  &sh_kp_M  &kp COMMA &kp DOT  &kp FSLH &trans
-&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp GRAVE    &sh_kp_N1 &altgr_q_for_at &kp BSLH  &sh_kp_N4 &sh_kp_N5                  &sh_kp_N6 &sh_kp_N7 &sh_kp_N8 &sh_kp_N9 &sh_kp_N0 &kp ESC
+&kp MINUS    &sh_kp_Q  &sh_kp_W        &sh_kp_E  &sh_kp_R  &sh_kp_T                   &sh_kp_Y  &sh_kp_U  &sh_kp_I  &sh_kp_O  &sh_kp_P  &kp TAB
+&kp SQT      &sh_kp_A  &sh_kp_S        &sh_kp_D  &sh_kp_F  &sh_kp_G                   &sh_kp_H  &sh_kp_J  &sh_kp_K  &sh_kp_L  &kp SEMI  &cycle_lang_en
+&trans       &sh_kp_Z  &sh_kp_X        &sh_kp_C  &sh_kp_V  &sh_kp_B                   &sh_kp_N  &sh_kp_M  &kp COMMA &kp DOT   &kp FSLH  &trans
+&kp LALT     &kp LGUI  &kp LBKT        &kp LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI  &kp RBKT  &kp BSPC  &kp RALT
                                                            &kp LCTRL                  &kp RCTRL    
             >;
 
