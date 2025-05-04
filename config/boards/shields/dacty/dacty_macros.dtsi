@@ -306,6 +306,20 @@
             bindings = <&sk LSHIFT &kp MINUS>;
         };
 
+        shift_COMMA: shift_COMMA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp COMMA>;
+        };
+
+        shift_DOT: shift_DOT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp DOT>;
+        };
+
+        
+
 
     };
 
