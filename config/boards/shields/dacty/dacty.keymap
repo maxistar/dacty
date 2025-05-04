@@ -141,14 +141,14 @@
 // |  ~    |  1  |  2  |  3   |  4   |  5   |                   |  ^   |  7    |  8    |  9   |   0   | ESC   |
 // |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
 // |  '    |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
-// |       |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   |       |
+// |       |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   ?   |       |
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
 &altgr_RBKT  &shift_N1 &altgr_q_for_at &kp BSLH  &shift_N4 &shift_N5                  &kp GRAVE &shift_N6 &shift_RBKT &shift_N8 &shift_N9 &kp ESC
 &shift_FSLH  &shift_Q  &shift_W        &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I  &shift_O   &shift_P  &kp TAB
 &shift_N2    &shift_A  &shift_S        &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K  &shift_L   &kp SEMI  &cycle_lang_en
-&trans       &shift_Z  &shift_X        &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &kp COMMA &kp DOT    &altgr_LT  &trans
+&trans       &shift_Z  &shift_X        &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &kp COMMA &kp DOT    &shift_MINUS  &trans
 &kp LALT     &kp LGUI  &altgr_N7        &kp LCTRL &trans   &trans                     &kp RET   &trans    &kp RGUI &altgr_N0  &kp BSPC  &kp RALT
                                                            &kp LCTRL                  &kp RCTRL    
             >;
