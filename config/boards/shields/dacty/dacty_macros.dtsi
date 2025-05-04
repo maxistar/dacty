@@ -69,206 +69,214 @@
             bindings = <&sk RALT &kp RBKT>;
         };
 
+        altgr_LT: altgr_LT
+        {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp LT>;
+        };
+        
+
         //======================================
 
-        sh_kp_N1: sh_kp_N1 {
+        shift_N1: shift_N1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N1>;
         };
 
-        sh_kp_N2: sh_kp_N2 {
+        shift_N2: shift_N2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N2>;
         };
 
-        sh_kp_N3: sh_kp_N3 {
+        shift_N3: shift_N3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N3>;
         };
 
-        sh_kp_N4: sh_kp_N4 {
+        shift_N4: shift_N4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N4>;
         };
 
-        sh_kp_N5: sh_kp_N5 {
+        shift_N5: shift_N5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N5>;
         };
 
-        sh_kp_N6: sh_kp_N6 {
+        shift_N6: shift_N6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N6>;
         };
 
-        sh_kp_N7: sh_kp_N7 {
+        shift_N7: shift_N7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N7>;
         };
 
-        sh_kp_N8: sh_kp_N8 {
+        shift_N8: shift_N8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N8>;
         };
 
-        sh_kp_N9: sh_kp_N9 {
+        shift_N9: shift_N9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N9>;
         };
 
-        sh_kp_N0: sh_kp_N0 {
+        shift_N0: shift_N0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N0>;
         };
 
-        sh_kp_RBKT: sh_kp_RBKT {
+        shift_RBKT: shift_RBKT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp RBKT>;
         };
 
-        sh_kp_A: macroSA {
+        shift_A: shift_A {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp A>;
         };
-        sh_kp_B: macroSB {
+        shift_B: shift_B {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp B>;
         };
-        sh_kp_C: macroSC {
+        shift_C: shift_C {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp C>;
         };
-        sh_kp_D: macroSD {
+        shift_D: shift_D {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp D>;
         };
-        sh_kp_E: macroSE {
+        shift_E: shift_E {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp E>;
         };
-        sh_kp_F: macroSF {
+        shift_F: shift_F {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp F>;
         };
-        sh_kp_G: macroSG {
+        shift_G: shift_G {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp G>;
         };
-        sh_kp_H: macroSH {
+        shift_H: shift_H {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp H>;
         };
-        sh_kp_I: macroSI {
+        shift_I: shift_I {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp I>;
         };
-        sh_kp_J: macroSJ {
+        shift_J: shift_J {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp J>;
         };
-        sh_kp_K: macroSK {
+        shift_K: shift_K {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp K>;
         };
-        sh_kp_L: macroSL {
+        shift_L: shift_L {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp L>;
         };
-        sh_kp_M: macroSM {
+        shift_M: shift_M {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp M>;
         };
-        sh_kp_N: macroSN {
+        shift_N: shift_N {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp N>;
         };
-        sh_kp_O: macroSO {
+        shift_O: shift_O {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp O>;
         };
-        sh_kp_P: macroSP {
+        shift_P: shift_P {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp P>;
         };
-        sh_kp_Q: macroSQ {
+        shift_Q: shift_Q {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp Q>;
         };
-        sh_kp_R: macroSR {
+        shift_R: shift_R {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp R>;
         };
-        sh_kp_S: macroSS {
+        shift_S: shift_S {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp S>;
         };
-        sh_kp_T: macroST {
+        shift_T: shift_T {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp T>;
         };
-        sh_kp_U: macroSU {
+        shift_U: shift_U {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp U>;
         };        
-        sh_kp_V: macroSV {
+        shift_V: shift_V {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp V>;
         };
-        sh_kp_W: macroSW {
+        shift_W: shift_W {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp W>;
         };
-        sh_kp_X: macroSX {
+        shift_X: shift_X {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp X>;
         };
-        sh_kp_Y: macroSY {
+        shift_Y: shift_Y {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp Y>;
         };
-        sh_kp_Z: macroSZ {
+        shift_Z: shift_Z {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp Z>;
         };        
 
-        sh_kp_BSLH: macroSBSLH {
+        shift_BSLH: shift_BSLH {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp BSLH>;
@@ -292,10 +300,10 @@
             bindings = <&sk LSHIFT &kp BSLH>;
         };
 
-        shift_MINUS: shift_MINUS {
+        shift_SQT: shift_SQT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp MINUS>;
+            bindings = <&sk LSHIFT &kp SQT>;
         };
 
     };
