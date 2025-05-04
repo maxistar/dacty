@@ -88,7 +88,7 @@
         sh_kp_N9: sh_kp_N9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp N1>;
+            bindings = <&sk LSHIFT &kp N9>;
         };
 
         sh_kp_N0: sh_kp_N0 {
