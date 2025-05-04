@@ -37,6 +37,31 @@
             bindings = <&sk RALT &kp MINUS>;
         };
 
+
+        altgr_N7: altgr_N7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N7>;
+        };
+
+        altgr_N8: altgr_N8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N8>;
+        };
+
+        altgr_N9: altgr_N9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N8>;
+        };
+
+        altgr_N0: altgr_N0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N0>;
+        };
+
         sh_kp_N1: sh_kp_N1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
