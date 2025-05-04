@@ -318,6 +318,12 @@
             bindings = <&sk LSHIFT &kp DOT>;
         };
 
+        shift_GRAVE: shift_GRAVE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp GRAVE>;
+        };
+
         
 
 
