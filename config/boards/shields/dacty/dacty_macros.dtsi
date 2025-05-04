@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk RALT &kp SQT>;
-        } 
+        };
 
         sh_kp_A: macroSA {
             compatible = "zmk,behavior-macro";
