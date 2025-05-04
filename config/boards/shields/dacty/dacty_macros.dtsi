@@ -79,6 +79,12 @@
 
         //======================================
 
+        shift_LT: shift_LT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp LT>;
+        };
+
         shift_N1: shift_N1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
