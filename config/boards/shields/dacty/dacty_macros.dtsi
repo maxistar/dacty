@@ -79,6 +79,14 @@
 
         //======================================
 
+
+
+        shift_NON_US_BACKSLASH: shift_NON_US_BACKSLASH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp NON_US_BACKSLASH>;
+        };
+
         shift_LT: shift_LT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
