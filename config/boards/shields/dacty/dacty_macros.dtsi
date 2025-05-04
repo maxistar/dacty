@@ -294,12 +294,6 @@
             bindings = <&sk LSHIFT &kp FSLH>;
         };
 
-        shift_BSLH: shift_BSLH {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp BSLH>;
-        };
-
         shift_SQT: shift_SQT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
