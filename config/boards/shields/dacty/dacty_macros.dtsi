@@ -53,7 +53,7 @@
         altgr_N9: altgr_N9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk RALT &kp N8>;
+            bindings = <&sk RALT &kp N9>;
         };
 
         altgr_N0: altgr_N0 {

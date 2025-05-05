@@ -36,8 +36,8 @@
 // |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
 // |  '    |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-// | ALT   | CTRL| "[" | CTRL | LOWER| SPACE|                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
-// |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
+// | ALT   | GUI | "[" | CTRL | LOWER| SPACE|                   | ENTER| RAISE | GUI   | "]"  |  BSPC | RALT  |
+// |       |     |     |      |      | CTRL |                   | CTRL |       |       |      |       |       |
 
 
             bindings = <
@@ -47,7 +47,7 @@
 &mo 5        &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo 5
 &kp LALT     &kp LGUI  &altgr_N8 &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &altgr_N9 &kp BSPC  &mo 6
                                                      &kp LCTRL                  &kp RCTRL    
-            >;
+            >
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
