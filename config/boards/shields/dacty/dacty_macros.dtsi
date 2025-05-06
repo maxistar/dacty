@@ -87,7 +87,17 @@
 
         //======================================
 
+        shift_LALT: shift_LALT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp LALT>;
+        };
 
+        shift_LCTRL: shift_LCTRL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp RCTRL>;
+        };
 
         shift_NON_US_BACKSLASH: shift_NON_US_BACKSLASH {
             compatible = "zmk,behavior-macro";
