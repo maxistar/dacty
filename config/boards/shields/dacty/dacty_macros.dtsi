@@ -331,6 +331,12 @@
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp SQT>;
         };
+        
+        shift_TAB: shift_TAB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp TAB>;
+        };
 
         shift_MINUS: shift_MINUS {
             compatible = "zmk,behavior-macro";
