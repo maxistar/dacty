@@ -17,8 +17,14 @@
 
 // layers
 #define DEFAULT 0
-#define LOWER 1
-#define MAGIC 2
+#define RUSSIAN 1
+#define ENGLISH 2
+#define LOWER 3
+#define MAGIC 4
+#define GERMAN_SHIFT 5
+#define GERMAN_RALT 6
+#define RUSSIAN_SHIFT 7
+
 
 
 /* Uncomment this block if using RGB

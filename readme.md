@@ -4,7 +4,7 @@
 ## Unified Layouts
 
 Before:
-![](docs/before.gif)
+![](docs/default/default.png.gif)
 
 After:
-![](docs/after.gif)
+![](docs/optimized/optimized.png.gif)
