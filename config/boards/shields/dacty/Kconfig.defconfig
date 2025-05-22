@@ -13,6 +13,13 @@ if SHIELD_DACTY_LEFT || SHIELD_DACTY_RIGHT
 config ZMK_SPLIT
     default y
 
+# Enable mouse support
+config ZMK_MOUSE
+    default y
+
+config ZMK_POINTING
+    default y
+
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
