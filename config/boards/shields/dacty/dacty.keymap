@@ -58,8 +58,6 @@
 &kp LALT     &kp LGUI  &altgr_N8 &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &altgr_N9 &kp BSPC  &mo 6
                                                      &kp LCTRL                  &kp RCTRL    
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         ru_layer {
@@ -80,8 +78,6 @@
 &kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
 
@@ -103,8 +99,6 @@
 &kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -122,8 +116,6 @@
 &trans     &trans           &trans            &trans            &trans         &trans                       &trans    &trans    &trans    &trans    &trans    &trans
                                                                                &trans                       &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -141,8 +133,6 @@
 &trans    &trans &trans          &trans          &trans        &trans                   &trans      &trans    &trans    &trans    &trans   &trans
                                                                &trans                   &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
 
@@ -162,8 +152,6 @@
 &shift_LALT  &kp LGUI  &altgr_N7       &shift_LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N0               &kp DEL  &kp RALT
                                                               &shift_LCTRL               &kp RCTRL    
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         german_ralt_layer {
@@ -182,8 +170,6 @@
 &kp LALT     &kp LGUI   &trans    &kp LCTRL &mo 3     &kp SPACE                  &kp RET   &mo 4     &kp RGUI  &trans    &kp BSPC &kp RALT
                                                       &kp LCTRL                  &kp RCTRL      
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         ru_layer_shift {
@@ -204,8 +190,6 @@
 &kp LALT     &kp LGUI  &kp LBKT  &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT  &kp BSPC    &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
     };
