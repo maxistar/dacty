@@ -1,22 +1,43 @@
 // layers
 #define DEFAULT 0
-#define RUSSIAN 1
-#define ENGLISH 2
-#define LOWER 3
-#define MAGIC 4
-#define DE_SHIFT 5
-#define DE_RALT 6
-#define RU_SHIFT 7
+#define DEUTSCH 1
+#define DE_MAC  2
+#define RUSSIAN 3
+#define LOWER 4
+#define MAGIC 5
+#define DE_SHIFT 6
+#define DE_RALT 7
+#define DE_RALT_MAC 8
+#define RU_SHIFT 9
 
 
 / {
 
     macros {
+
+        to_linux: to_linux {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&bt BT_SEL 1 &to DEUTSCH>;
+        };
+
+        to_mac: to_mac {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&bt BT_SEL 2 &to DE_MAC>;
+        };
+
+        to_android: to_android {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&bt BT_SEL 3 &to ANDROID>;
+        };
+
         cycle_lang_de: cycle_lang_de {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to DEFAULT>,
+                = <&to DEUTSCH>,
                   <&kp CAPS>;
         };
 
@@ -28,11 +49,19 @@
                   <&kp CAPS>;
         };
 
+        cycle_mac_ru: cycle_mac_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to RUSSIAN>,
+                  <&kp CAPS>;
+        };
+
         cycle_lang_en: cycle_lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to ENGLISH>,
+                = <&to DEFAULT>,
                   <&kp CAPS>;
         };
 
@@ -87,6 +116,12 @@
             bindings = <&sk RALT &kp LT>;
         };
 
+        alt_N: altgr_N
+        {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N>;
+        };
                 
         alt_TAB: altgr_TAB
         {
