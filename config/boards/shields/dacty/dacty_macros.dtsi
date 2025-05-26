@@ -1,3 +1,14 @@
+// layers
+#define DEFAULT 0
+#define RUSSIAN 1
+#define ENGLISH 2
+#define LOWER 3
+#define MAGIC 4
+#define DE_SHIFT 5
+#define DE_RALT 6
+#define RU_SHIFT 7
+
+
 / {
 
     macros {
@@ -5,7 +16,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to 0>,
+                = <&to DEFAULT>,
                   <&kp CAPS>;
         };
 
@@ -13,7 +24,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to 1>,
+                = <&to RUSSIAN>,
                   <&kp CAPS>;
         };
 
@@ -21,7 +32,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to 2>,
+                = <&to ENGLISH>,
                   <&kp CAPS>;
         };
 
