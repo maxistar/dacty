@@ -24,13 +24,15 @@
         to_mac: to_mac {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&bt BT_SEL 2 &to DE_MAC>;
+          bindings = <&bt BT_SEL 2>,
+                     <&to DE_MAC>;
         };
 
         to_android: to_android {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&bt BT_SEL 3 &to ANDROID>;
+          bindings = <&bt BT_SEL 3>,
+                     <&to ANDROID>;
         };
 
         cycle_lang_de: cycle_lang_de {
