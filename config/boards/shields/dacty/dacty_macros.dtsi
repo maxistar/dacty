@@ -89,6 +89,18 @@
             bindings = <&sk RALT &kp MINUS>;
         };
 
+        altgr_N5: altgr_N5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N5>;
+        };
+
+        altgr_N6: altgr_N6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp N6>;
+        };
+
 
         altgr_N7: altgr_N7 {
             compatible = "zmk,behavior-macro";
