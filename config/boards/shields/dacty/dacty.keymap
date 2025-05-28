@@ -81,7 +81,7 @@
 // |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
 // |  '    |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-// | ALT   | GUI | "[" | CTRL | LOWER| SPACE|                   | ENTER| RAISE | GUI   | "]"  |  BSPC | RALT  |
+// | ALT   | GUI | "[" | SPACE| LOWER| SPACE|                   | ENTER| RAISE | SPACE | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | CTRL |                   | CTRL |       |       |      |       |       |
 
 
@@ -90,7 +90,7 @@
 &kp FSLH         &kp Q     &kp W     &kp E     &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
 &shift_BSLH      &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_mac_ru
 &mo DE_SHIFT_MAC &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT_MAC
-&kp LALT         &kp LCTRL &altgr_N5 &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RCTRL &altgr_N6 &kp BSPC  &mo DE_RALT_MAC
+&kp LALT         &kp LCTRL &altgr_N5 &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp SPACE &altgr_N6 &kp BSPC  &mo DE_RALT_MAC
                                                          &kp LGUI                   &kp RGUI    
             >;
         };
