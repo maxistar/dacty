@@ -3,13 +3,14 @@
 #define DEUTSCH 1
 #define DE_MAC  2
 #define RUSSIAN 3
-#define LOWER 4
-#define MAGIC 5
-#define DE_SHIFT 6
-#define DE_SHIFT_MAC 7
-#define DE_RALT 8
-#define DE_RALT_MAC 9
-#define RU_SHIFT 10
+#define RUSSIAN_MAC 4
+#define LOWER 5
+#define MAGIC 6
+#define DE_SHIFT 7
+#define DE_SHIFT_MAC 8
+#define DE_RALT 9
+#define DE_RALT_MAC 10
+#define RU_SHIFT 11
 
 
 / {
@@ -41,6 +42,14 @@
             #binding-cells = <0>;
             bindings
                 = <&to DEUTSCH>,
+                  <&kp CAPS>;
+        };
+
+        cycle_mac_de: cycle_mac_de {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to DE_MAC>,
                   <&kp CAPS>;
         };
 

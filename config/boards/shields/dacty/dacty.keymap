@@ -115,6 +115,26 @@
             >;
         };
 
+        ru_layer_mac {
+// ------------------------------------------------------------------------------------------------------------
+// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
+// |  -    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TAB   |
+// |  '    |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// | ALT   | CTRL| "[" | CTRL | LOWER| SPACE|                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
+// |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
+
+
+            bindings = <
+&kp GRAVE    &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
+&kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
+&kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_mac_de
+&mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo RU_SHIFT
+&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+                                                    &kp LCTRL                  &kp RCTRL    
+            >;
+        };
+
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
