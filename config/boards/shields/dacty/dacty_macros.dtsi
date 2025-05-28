@@ -1,16 +1,17 @@
 // layers
 #define DEFAULT 0
-#define DEUTSCH 1
-#define DE_MAC  2
-#define RUSSIAN 3
-#define RUSSIAN_MAC 4
-#define LOWER 5
-#define MAGIC 6
-#define DE_SHIFT 7
-#define DE_SHIFT_MAC 8
-#define DE_RALT 9
-#define DE_RALT_MAC 10
-#define RU_SHIFT 11
+#define DEFAULT_ANDROIND 1
+#define DEUTSCH 2
+#define DE_MAC  3
+#define RUSSIAN 4
+#define RUSSIAN_MAC 5
+#define LOWER 6
+#define MAGIC 7
+#define DE_SHIFT 8
+#define DE_SHIFT_MAC 9
+#define DE_RALT 10
+#define DE_RALT_MAC 11
+#define RU_SHIFT 12
 
 
 / {
@@ -34,7 +35,7 @@
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <&bt BT_SEL 3>,
-                     <&to DEFAULT>;
+                     <&to DEFAULT_ANDROIND>;
         };
 
         cycle_lang_de: cycle_lang_de {
@@ -43,6 +44,14 @@
             bindings
                 = <&to DEUTSCH>,
                   <&kp CAPS>;
+        };
+
+        cycle_android: cycle_android {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&sk SHIFT>,
+                  <&kp SPACE>;
         };
 
         cycle_mac_de: cycle_mac_de {
