@@ -21,20 +21,20 @@
         to_linux: to_linux {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&bt BT_SEL 1 &to DEUTSCH>;
+          bindings = <&bt BT_SEL 0 &to DEUTSCH>;
         };
 
         to_mac: to_mac {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&bt BT_SEL 2>,
+          bindings = <&bt BT_SEL 1>,
                      <&to DE_MAC>;
         };
 
         to_android: to_android {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&bt BT_SEL 3>,
+          bindings = <&bt BT_SEL 2>,
                      <&to DEFAULT_ANDROIND>;
         };
 
