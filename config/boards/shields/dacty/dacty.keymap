@@ -91,7 +91,7 @@
 &shift_BSLH      &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_mac_ru
 &mo DE_SHIFT_MAC &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT_MAC
 &kp LALT         &kp LCTRL &altgr_N8 &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RCTRL &altgr_N9 &kp BSPC  &mo DE_RALT_MAC
-                                                     &kp LGUI                   &kp RGUI    
+                                                         &kp LGUI                   &kp RGUI    
             >;
         };
 
