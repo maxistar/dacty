@@ -6,9 +6,10 @@
 #define LOWER 4
 #define MAGIC 5
 #define DE_SHIFT 6
-#define DE_RALT 7
-#define DE_RALT_MAC 8
-#define RU_SHIFT 9
+#define DE_SHIFT_MAX 7
+#define DE_RALT 8
+#define DE_RALT_MAC 9
+#define RU_SHIFT 10
 
 
 / {
