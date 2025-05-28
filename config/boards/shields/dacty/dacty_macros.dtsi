@@ -65,7 +65,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to RUSSIAN>,
+                = <&to RUSSIAN_MAC>,
                   <&kp CAPS>;
         };
 
