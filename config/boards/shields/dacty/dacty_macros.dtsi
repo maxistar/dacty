@@ -457,12 +457,6 @@
         };
 
 
-        shift_RBKT: shift_RBKT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT &kp RBKT>;
-        };
-        
     };
 
 };
