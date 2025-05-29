@@ -158,6 +158,12 @@
             bindings = <&sk RALT &kp LT>;
         };
 
+        altgr_NUBACK: altgr_NUBACK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp NON_US_BACKSLASH>;
+        };
+
         alt_N: altgr_N
         {
             compatible = "zmk,behavior-macro";
@@ -455,8 +461,7 @@
             #binding-cells = <0>;
             bindings = <&sk LSHIFT &kp LBKT>;
         };
-
-
+        
     };
 
 };
