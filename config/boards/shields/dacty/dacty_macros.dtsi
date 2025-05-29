@@ -1,6 +1,6 @@
 // layers
 #define DEFAULT 0
-#define DEFAULT_ANDROIND 1
+#define DEFAULT_ANDROID 1
 #define DEUTSCH 2
 #define DE_MAC  3
 #define RUSSIAN 4
@@ -36,7 +36,7 @@
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <&bt BT_SEL 2>,
-                     <&to DEFAULT_ANDROIND>;
+                     <&to DEFAULT_ANDROID>;
         };
 
         cycle_lang_de: cycle_lang_de {
