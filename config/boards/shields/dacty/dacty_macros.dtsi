@@ -5,13 +5,14 @@
 #define DE_MAC  3
 #define RUSSIAN 4
 #define RUSSIAN_MAC 5
-#define LOWER 6
-#define MAGIC 7
-#define DE_SHIFT 8
-#define DE_SHIFT_MAC 9
-#define DE_RALT 10
-#define DE_RALT_MAC 11
-#define RU_SHIFT 12
+#define RU_ANDROID 6
+#define LOWER 7
+#define MAGIC 8
+#define DE_SHIFT 9
+#define DE_SHIFT_MAC 10
+#define DE_RALT 11
+#define DE_RALT_MAC 12
+#define RU_SHIFT 13
 
 
 / {
@@ -50,8 +51,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&sk LSHFT>,
-                  <&kp SPACE>;
+                = <&to RU_ANDROID>,
+                  <&sk LCTRL &kp SPACE>;
+        };
+
+        cycle_android_de: cycle_android_de {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to DEFAULT_ANDROID>,
+                  <&sk LCTRL &kp SPACE>;
         };
 
         cycle_mac_de: cycle_mac_de {
