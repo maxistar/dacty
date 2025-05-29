@@ -450,9 +450,19 @@
             bindings = <&sk LSHIFT &kp GRAVE>;
         };
 
+        shift_LBKT: shift_LBKT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp LBKT>;
+        };
+
+
+        shift_RBKT: shift_RBKT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT &kp RBKT>;
+        };
         
-
-
     };
 
 };
