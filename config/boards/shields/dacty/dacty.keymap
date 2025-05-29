@@ -47,7 +47,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_de
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -67,7 +67,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_android
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -88,7 +88,7 @@
 &kp FSLH     &kp Q     &kp W     &kp E     &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
 &shift_BSLH  &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_lang_ru
 &mo DE_SHIFT &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT
-&kp LALT     &kp LGUI  &altgr_N8 &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &altgr_N9 &kp BSPC  &mo DE_RALT
+&kp LALT     &kp LGUI  &altgr_N8 &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &altgr_N9 &kp BSPC  &mo DE_RALT
                                                      &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -129,7 +129,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_en
 &mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo RU_SHIFT
-&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -149,7 +149,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_mac_de
 &mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo RU_SHIFT
-&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -169,7 +169,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_android_de
 &mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo RU_SHIFT
-&kp LALT     &kp LGUI  &kp LBKT &kp LCTRL &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI  &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };        
@@ -218,12 +218,12 @@
 // | ALT   | CTRL| "[" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "]"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&altgr_RBKT  &shift_N1 &altgr_q_for_at &kp BSLH     &shift_N4 &shift_N5                  &kp GRAVE &shift_N6 &shift_RBKT          &shift_N8               &shift_N9 &kp ESC
-&shift_FSLH  &shift_Q  &shift_W        &shift_E     &shift_R  &shift_T                   &shift_Z  &shift_U  &shift_I             &shift_O                &shift_P  &shift_TAB
-&shift_N2    &shift_A  &shift_S        &shift_D     &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K             &shift_L                &shift_DOT  &cycle_lang_en
-&trans       &shift_Y  &shift_X        &shift_C     &shift_V  &shift_B                   &shift_N  &shift_M  &kp NON_US_BACKSLASH &shift_NON_US_BACKSLASH &shift_MINUS  &trans
-&shift_LALT  &kp LGUI  &altgr_N7       &shift_LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N0               &kp DEL  &kp RALT
-                                                              &shift_LCTRL               &kp RCTRL    
+&altgr_RBKT  &shift_N1 &altgr_q_for_at &kp BSLH  &shift_N4 &shift_N5                  &kp GRAVE &shift_N6 &shift_RBKT          &shift_N8               &shift_N9 &kp ESC
+&shift_FSLH  &shift_Q  &shift_W        &shift_E  &shift_R  &shift_T                   &shift_Z  &shift_U  &shift_I             &shift_O                &shift_P  &shift_TAB
+&shift_N2    &shift_A  &shift_S        &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K             &shift_L                &shift_DOT  &cycle_lang_en
+&trans       &shift_Y  &shift_X        &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &kp NON_US_BACKSLASH &shift_NON_US_BACKSLASH &shift_MINUS  &trans
+&shift_LALT  &kp LGUI  &altgr_N7       &kp SPACE &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N0               &kp DEL  &kp RALT
+                                                           &shift_LCTRL               &kp RCTRL    
             >;
         };
 
@@ -236,11 +236,11 @@
 // | ALT   | CTRL| "{" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | "}"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
-&alt_N       &shift_N1 &altgr_q_for_at &kp BSLH     &shift_N4 &shift_N5                  &kp GRAVE &shift_N6 &shift_RBKT          &shift_N8               &shift_N9 &kp ESC
-&shift_FSLH  &shift_Q  &shift_W        &shift_E     &shift_R  &shift_T                   &shift_Z  &shift_U  &shift_I             &shift_O                &shift_P  &shift_TAB
-&shift_N2    &shift_A  &shift_S        &shift_D     &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K             &shift_L                &shift_DOT  &cycle_lang_en
-&trans       &shift_Y  &shift_X        &shift_C     &shift_V  &shift_B                   &shift_N  &shift_M  &kp GRAVE            &shift_GRAVE            &shift_MINUS  &trans
-&shift_LALT  &kp LGUI  &altgr_N8       &shift_LCTRL &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N9               &kp DEL  &kp RALT
+&alt_N       &shift_N1 &altgr_q_for_at &kp BSLH     &shift_N4 &shift_N5                  &kp GRAVE &shift_N6 &shift_RBKT          &shift_N8               &shift_N9    &kp ESC
+&shift_FSLH  &shift_Q  &shift_W        &shift_E     &shift_R  &shift_T                   &shift_Z  &shift_U  &shift_I             &shift_O                &shift_P     &shift_TAB
+&shift_N2    &shift_A  &shift_S        &shift_D     &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K             &shift_L                &shift_DOT   &cycle_lang_en
+&trans       &shift_Y  &shift_X        &shift_C     &shift_V  &shift_B                   &shift_N  &shift_M  &kp GRAVE            &shift_GRAVE            &shift_MINUS &trans
+&shift_LALT  &kp LGUI  &altgr_N8       &kp SPACE    &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N9               &kp DEL      &kp RALT
                                                               &shift_LCTRL               &kp RCTRL    
             >;
         };
@@ -257,7 +257,7 @@
 &kp GRAVE    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0        &kp ESC
 &kp MINUS    &kp Q      &kp W     &kp E     &kp R     &kp T                      &kp Y     &kp LBKT  &kp I     &kp SEMI  &kp P         &alt_TAB
 &kp SQT      &kp SQT    &kp MINUS &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &altgr_NUBACK &kp CAPS
-&kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &altgr_N0     &kp RSHFT
+&kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   altgr_MINUS   &kp RSHFT
 &kp LALT     &kp LGUI   &trans    &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &trans    &kp BSPC      &kp RALT
                                                       &kp LCTRL                  &kp RCTRL      
             >;
@@ -292,12 +292,12 @@
 
 
             bindings = <
-&shift_GRAVE &shift_N1 &shift_N2 &shift_N3 &shift_N4 &shift_N5                  &shift_N6 &shift_N7 &shift_N8    &shift_N9   &shift_N0   &kp ESC
-&shift_MINUS &shift_Q  &shift_W  &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I     &shift_O    &shift_P    &shift_TAB
-&shift_SQT   &shift_A  &shift_S  &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K     &shift_L    &kp SEMI    &cycle_lang_en
-&kp LSHFT    &shift_Z  &shift_X  &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans &kp SPACE                   &kp RET   &trans    &kp RGUI     &shift_RBKT &kp BSPC    &kp RALT
-                                                    &kp LCTRL                   &kp RCTRL    
+&shift_GRAVE &shift_N1 &shift_N2   &shift_N3 &shift_N4 &shift_N5                  &shift_N6 &shift_N7 &shift_N8    &shift_N9   &shift_N0   &kp ESC
+&shift_MINUS &shift_Q  &shift_W    &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I     &shift_O    &shift_P    &shift_TAB
+&shift_SQT   &shift_A  &shift_S    &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K     &shift_L    &kp SEMI    &cycle_lang_en
+&kp LSHFT    &shift_Z  &shift_X    &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_FSLH &kp RSHFT
+&kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp RGUI     &shift_RBKT &kp BSPC    &kp RALT
+                                                       &kp LCTRL                  &kp RCTRL    
             >;
         };
 
