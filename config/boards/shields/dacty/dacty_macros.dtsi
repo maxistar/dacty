@@ -95,12 +95,17 @@
                   <&kp CAPS>;
         };
 
-        altgr_q_for_at: macro {
+        altgr_q_for_at: altgr_q_for_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk RALT &kp Q>;
         };
-
+        
+        altgr_l_for_at: altgr_l_for_at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RALT &kp L>;
+        };
         altgr_MINUS: altgr_MINUS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
