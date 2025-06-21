@@ -145,11 +145,11 @@
 
 
             bindings = <
-&kp GRAVE    &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
-&kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
-&kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_mac_de
-&mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mo RU_SHIFT
-&kp LALT     &kp LCTRL &kp LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE &kp RBKT &kp BSPC &kp RALT
+&kp GRAVE    &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp ESC
+&kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P     &kp TAB
+&kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI  &cycle_mac_de
+&mo RU_SHIFT &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &shift_N6 &mo RU_SHIFT
+&kp LALT     &kp LCTRL &kp LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE &kp RBKT &kp BSPC  &kp RALT
                                                     &kp LGUI                   &kp RCTRL    
             >;
         };
@@ -301,5 +301,24 @@
             >;
         };
 
+        ru_layer_shift_mac {
+// ------------------------------------------------------------------------------------------------------------
+// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
+// |  -    |  Й  |  Ц  |  У   |  К   |  Е   |                   |  Н   |  Г    |  Ш    |  Щ   |   З   | TAB   |
+// |  '    |  Ф  |  Ы  |  В   |  А   |  П   |                   |  Р   |  О    |  Л    |  Д   |   Ж   | CAPS  |
+// | SHIFT |  Я  |  Ч  |  С   |  М   |  И   |                   |  Т   |  Ь    |  Б    |  Ю   |   /   | SHIFT |
+// | ALT   | CTRL|  Х  |      | LOWER| SPACE|                   | ENTER| RAISE | CTRL  |  Ъ   |  BSPC | RALT  |
+// |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
+
+
+            bindings = <
+&shift_GRAVE &shift_N1 &shift_N2   &shift_N3 &shift_N4 &shift_N5                  &shift_N6 &shift_N7 &shift_N8    &shift_N9   &shift_N0   &kp ESC
+&shift_MINUS &shift_Q  &shift_W    &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I     &shift_O    &shift_P    &shift_TAB
+&shift_SQT   &shift_A  &shift_S    &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K     &shift_L    &kp SEMI    &cycle_lang_en
+&kp LSHFT    &shift_Z  &shift_X    &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_N6   &kp RSHFT
+&kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE    &shift_RBKT &kp DEL     &kp RALT
+                                                       &kp LCTRL                  &kp RCTRL    
+            >;
+        };
     };
 };
