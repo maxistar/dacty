@@ -13,7 +13,7 @@
 #define DE_RALT 11
 #define DE_RALT_MAC 12
 #define RU_SHIFT 13
-
+#define RU_SHIFT_MAC 14
 
 / {
 
