@@ -222,7 +222,7 @@
 &shift_FSLH  &shift_Q  &shift_W        &shift_E  &shift_R  &shift_T                   &shift_Z  &shift_U  &shift_I             &shift_O                &shift_P  &shift_TAB
 &shift_N2    &shift_A  &shift_S        &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K             &shift_L                &shift_DOT  &cycle_lang_en
 &trans       &shift_Y  &shift_X        &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &kp NON_US_BACKSLASH &shift_NON_US_BACKSLASH &shift_MINUS  &trans
-&shift_LALT  &kp LGUI  &altgr_N7       &kp SPACE &trans    &trans                     &kp RET   &trans    &kp RGUI             &altgr_N0               &kp DEL  &kp RALT
+&shift_LALT  &kp LGUI  &altgr_N7       &kp SPACE &trans    &trans                     &kp RET   &trans    &kp SPACE            &altgr_N0               &kp DEL  &kp RALT
                                                            &shift_LCTRL               &kp RCTRL    
             >;
         };
@@ -257,8 +257,8 @@
 &kp GRAVE    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0        &kp ESC
 &kp MINUS    &kp Q      &kp W     &kp E     &kp R     &kp T                      &kp Y     &kp LBKT  &kp I     &kp SEMI  &kp P         &alt_TAB
 &kp SQT      &kp SQT    &kp MINUS &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &altgr_NUBACK &kp CAPS
-&kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &altgr_MINUS   &kp RSHFT
-&kp LALT     &kp LGUI   &trans    &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &trans    &kp BSPC      &kp RALT
+&kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &altgr_MINUS  &kp RSHFT
+&kp LALT     &kp LGUI   &trans    &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &trans    &kp DEL       &kp RALT
                                                       &kp LCTRL                  &kp RCTRL      
             >;
         };
@@ -276,7 +276,7 @@
 &kp MINUS    &kp Q      &kp W     &kp E     &kp R     &kp T                      &kp Y     &kp LBKT  &kp I     &kp SEMI  &kp P    &alt_TAB
 &kp SQT      &kp SQT    &kp MINUS &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp CAPS
 &kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI   &trans    &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &trans    &kp BSPC &kp RALT
+&kp LALT     &kp LGUI   &trans    &kp LCTRL &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &trans    &kp DEL  &kp RALT
                                                       &kp LCTRL                  &kp RCTRL      
             >;
         };
@@ -296,7 +296,7 @@
 &shift_MINUS &shift_Q  &shift_W    &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I     &shift_O    &shift_P    &shift_TAB
 &shift_SQT   &shift_A  &shift_S    &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K     &shift_L    &kp SEMI    &cycle_lang_en
 &kp LSHFT    &shift_Z  &shift_X    &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE    &shift_RBKT &kp BSPC    &kp RALT
+&kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE    &shift_RBKT &kp DEL     &kp RALT
                                                        &kp LCTRL                  &kp RCTRL    
             >;
         };
