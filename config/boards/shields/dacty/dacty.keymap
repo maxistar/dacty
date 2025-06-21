@@ -47,11 +47,11 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_de
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp SPACE &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
-
+.
         default_layer_android {
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
@@ -67,7 +67,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_android
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp SPACE &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -88,7 +88,7 @@
 &kp FSLH     &kp Q     &kp W     &kp E     &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
 &shift_BSLH  &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_lang_ru
 &mo DE_SHIFT &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT
-&kp LALT     &kp LGUI  &altgr_N8 &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp RGUI  &altgr_N9 &kp BSPC  &mo DE_RALT
+&kp LALT     &kp LGUI  &altgr_N8 &kp SPACE &mo LOWER &kp SPACE                  &kp RET   &mo MAGIC &kp SPACE &altgr_N9 &kp BSPC  &mo DE_RALT
                                                      &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -153,7 +153,7 @@
                                                         &kp LGUI                   &kp RCTRL    
             >;
         };
-
+            
         ru_layer_android {
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
@@ -208,7 +208,7 @@
             >;
         };
 
-
+ 
         german_shift_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  ~    |  1  |  2  |  3   |  4   |  5   |                   |  ^   |  7    |  8    |  9   |   0   | ESC   |
@@ -315,7 +315,7 @@
 &shift_GRAVE &shift_N1 &shift_N2   &shift_N3 &shift_N4 &shift_N5                  &shift_N6 &shift_N7 &shift_N8    &shift_N9   &shift_N0   &kp ESC
 &shift_MINUS &shift_Q  &shift_W    &shift_E  &shift_R  &shift_T                   &shift_Y  &shift_U  &shift_I     &shift_O    &shift_P    &shift_TAB
 &shift_SQT   &shift_A  &shift_S    &shift_D  &shift_F  &shift_G                   &shift_H  &shift_J  &shift_K     &shift_L    &kp SEMI    &cycle_lang_en
-&kp LSHFT    &shift_Z  &shift_X    &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_N6   &kp RSHFT
+&kp LSHFT    &shift_Z  &shift_X    &shift_C  &shift_V  &shift_B                   &shift_N  &shift_M  &shift_COMMA &shift_DOT  &shift_N5   &kp RSHFT
 &kp LALT     &kp LGUI  &shift_LBKT &kp SPACE &trans    &kp SPACE                  &kp RET   &trans    &kp SPACE    &shift_RBKT &kp DEL     &kp RALT
                                                        &kp LCTRL                  &kp RCTRL    
             >;
