@@ -10,8 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
-
-
+#include <behaviors/studio.dtsi>
 
 #include "dacty_macros.dtsi"
 
@@ -186,11 +185,11 @@
 &kp F1     &kp F2           &kp F3            &kp F4            &kp F5        &kp F6                       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR    &kp PRCNT                    &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp TILDE
 &trans     &trans           &to 0             &to 1             &to 2         &trans                       &trans    &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-&trans     &trans           &trans            &trans            &trans        &trans                       &trans    &trans    &trans    &trans    &trans    &trans
+&trans     &trans           &trans            &trans            &trans        &trans                       &trans    &trans    &studio_unlock    &trans    &trans    &trans
                                                                               &trans                       &trans
             >;
         };
-
+``
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |      |      |      |      |                   |  +   |   -   |   =   |   [  |   ]   |   \   |
