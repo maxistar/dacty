@@ -29,7 +29,9 @@
             bindings = <&kp RET1>;
        };
     };
-    
+};
+
+/ {
     macros {
 
         to_linux: to_linux {
