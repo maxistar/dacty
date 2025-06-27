@@ -46,7 +46,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_lang_de
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &kp RET   &kp SPACE &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &kp SPACE &kp SPACE &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -66,7 +66,7 @@
 &kp MINUS    &kp Q     &kp W    &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S    &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_android
 &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &kp RET   &kp SPACE &kp RBKT &kp BSPC &kp RALT
+&kp LALT     &kp LGUI  &kp LBKT &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -87,7 +87,7 @@
 &kp FSLH     &kp Q     &kp W     &kp E     &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
 &shift_BSLH  &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_lang_ru
 &mo DE_SHIFT &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT
-&kp LALT     &kp LGUI  &altgr_N8 &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &kp RET   &kp SPACE &altgr_N9 &kp BSPC  &mo DE_RALT
+&kp LALT     &kp LGUI  &altgr_N8 &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &altgr_N9 &kp BSPC  &mo DE_RALT
                                                      &kp LCTRL                  &kp RCTRL    
             >;
         };
@@ -108,7 +108,7 @@
 &kp FSLH         &kp Q     &kp W     &kp E     &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
 &shift_BSLH      &kp A     &kp S     &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_mac_ru
 &mo DE_SHIFT_MAC &kp Y     &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT_MAC
-&kp LALT         &kp LCTRL &altgr_N5 &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &kp RET   &kp SPACE &altgr_N6 &kp BSPC  &mo DE_RALT_MAC
+&kp LALT         &kp LCTRL &altgr_N5 &kp SPACE &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &altgr_N6 &kp BSPC  &mo DE_RALT_MAC
                                                          &kp LGUI                   &kp RGUI    
             >;
         };
@@ -275,7 +275,7 @@
 &kp MINUS    &kp Q      &kp W     &kp E     &kp R     &kp T                      &kp Y     &kp LBKT  &kp I     &kp SEMI  &kp P    &alt_TAB
 &kp SQT      &kp SQT    &kp MINUS &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp CAPS
 &kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
-&kp LALT     &kp LGUI   &trans    &kp LCTRL &trans    &trans                     &trans    &trans &kp RGUI  &trans    &kp DEL  &kp RALT
+&kp LALT     &kp LGUI   &trans    &kp LCTRL &trans    &trans                     &trans    &trans    &kp RGUI  &trans    &kp DEL  &kp RALT
                                                       &kp LCTRL                  &kp RCTRL      
             >;
         };
