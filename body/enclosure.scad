@@ -1,153 +1,142 @@
+perimeter_offset = 6;
+shell_offset = 3;
+
 module outline() {
   include <right-test.scad>;
 }
 
-module outline_perimeter() {
+module outline_offset(offset=1) {
   minkowski() {
-  hull() {
-    outline();
-  }
-  sphere(r=6);
-  }  
+    hull() {
+      outline();
+    }
+    sphere(r=offset);
+  }     
+}
+
+module outline_perimeter() {
+    outline_offset(perimeter_offset);
 }
 
 module outline_outer() {
-  minkowski() {
-  hull() {
-    outline();
-  }
-  sphere(r=3);
-  }  
+  outline_offset(shell_offset);
 }
 
 module outline_outer_gap() {
-  minkowski() {
-  hull() {
-    outline();
-  }
-  sphere(r=3-0.3);
-  }  
+  outline_offset(shell_offset-0.3);
+}
+
+module outline_inner() {
+  outline_offset(1.53); 
 }
 
 module outline_outer_cut() {
     difference() {
         outline_outer();
-        translate([0, 0, -100+0.5])
-      cube([200, 200, 200], center = true);   
+      translate([0, 0, -100 + 5])
+        cube([200, 200, 200], center = true);   
     }
 }
 
-module outline_inner() {
-  minkowski() {
-  hull() {
-    outline();
-  }
-  sphere(r=1);
-  }  
-}
+
 
 module cover_shell() {
   difference() {
     outline_outer();
     outline_inner();
-    translate([0, 0, -100+0.5])
+    translate([0, 0, -100 + 5])
       cube([200, 200, 200], center = true);   
 
   }
 }
 
+module perimeter_2d_projection() {
+  difference() {
+    projection() {
+      intersection() {
+        outline_perimeter();
+        cube([200, 200, 1], center = true);
+      }
+    }
+    projection() {
+      intersection() {
+        outline_inner();
+        cube([200, 200, 1], center = true);
+      }
+    }
+  } 
+}
+
 module perimeter() {
   difference() {
-    translate([0, 0, -7])
-    linear_extrude(height=10) {
-    difference() {
-      projection() {
-       intersection() {
-         outline_perimeter();
-         cube([200, 200, 1], center = true);
-       }
-     }
-
-     projection() {
-       intersection() {
-         outline_inner();
-         cube([200, 200, 1], center = true);
-       }
-     }
+    translate([0, 0, -7]) {
+      linear_extrude(height=10) {
+        perimeter_2d_projection();
+      }
     }
+    translate([0, 0, -5]) {
+      outline_outer_cut();
     }
-    outline_outer_cut();
   }
   
-  translate([0, 0, -9])
-  linear_extrude(height=2) {
-    difference() {
-      projection() {
-       intersection() {
-         outline_perimeter();
-         cube([200, 200, 1], center = true);
-       }
-     }
+  translate([0, 0, -9]) {
+    linear_extrude(height=2) {
+      difference() {
+        projection() {
+          intersection() {
+            outline_perimeter();
+            cube([200, 200, 1], center = true);
+          }
+        }
 
-     projection() {
-       intersection() {
-         outline_outer();
-         cube([200, 200, 1], center = true);
-       }
-     }
+        projection() {
+          intersection() {
+            outline_outer();
+            cube([200, 200, 1], center = true);
+          }
+        }
+      }
     }
-    }
-  
+  }
 }
 
 
 module perimeter_left() {
    
-  scale([1, 1, -1])  
-  union() {  
-    difference() {
-    translate([0, 0, -7])
-    linear_extrude(height=10) {
-    difference() {
-      projection() {
-       intersection() {
-         outline_perimeter();
-         cube([200, 200, 1], center = true);
-       }
-     }
-
-     projection() {
-       intersection() {
-         outline_inner();
-         cube([200, 200, 1], center = true);
-       }
-     }
-    }
-    }
-    outline_outer_cut();
-  }
+  scale([1, 1, -1]) { 
+    union() {  
+      difference() {
+        translate([0, 0, -7]) {
+          linear_extrude(height=10) {
+            perimeter_2d_projection();
+          }
+        }
+        translate([0, 0, -5]) {
+          outline_outer_cut();
+        }
+      }
   
-  translate([0, 0, -9])
-  linear_extrude(height=2) {
-    difference() {
-      projection() {
-       intersection() {
-         outline_outer_gap();
-         cube([200, 200, 1], center = true);
-       }
-     }
+      translate([0, 0, -9]) {
+        linear_extrude(height=2) {
+          difference() {
+            projection() {
+              intersection() {
+                outline_outer_gap();
+                cube([200, 200, 1], center = true);
+              }
+            }
 
-     projection() {
-       intersection() {
-         outline_inner();
-         cube([200, 200, 1], center = true);
-       }
-     }
+            projection() {
+              intersection() {
+                outline_inner();
+                cube([200, 200, 1], center = true);
+              }
+            }
+          }
+        }  
+      }
     }
-    }
-    
   }
-  
 }
 
 module latch() {
@@ -246,23 +235,26 @@ module left_cover() {
     cover_shell();
 }
 
+module build_shema() {
+  translate([0, 0, -100]) {
+    left_cover();
+  }
 
-translate([0, 0, -100]) {
-  left_cover();
+  translate([0, 0, -50]) {
+    latches_left();
+    perimeter_left();
+  }
+
+  translate([0, 0, 50]) 
+    cover_shell();
+
+  latches();
+  perimeter();
 }
 
-translate([0, 0, -50]) {
-  latches_left();
-  perimeter_left();
-}
-
-translate([0, 0, 50]) 
-  cover_shell();
-
-latches();
-perimeter();
-
-
+build_shema();
+//outline_outer_cut();
+//cover_shell();
 
 
 //latch_left();
