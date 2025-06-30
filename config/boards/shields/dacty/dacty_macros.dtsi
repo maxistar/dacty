@@ -38,14 +38,22 @@
 
 / {
   behaviors {
-    shift_layer_ht: behavior_hold_tap {
-      compatible = "zmk,behavior-hold-tap";
+    shift_layer_x: shift_layer_x {
+      compatible = "zmk, behavior-hold-tap";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      flavor = "hold-preferred"; // или "balanced"
-      bindings = <&mo SHIFT_LAYER>, <&kp X>;
+      flavor = "hold-preferred"; 
+      bindings = <&mo DE_SHIFT>, <&kp X>;
     };
-  };
+    
+    shift_layer_x_m: shift_layer_x {
+      compatible = "zmk, behavior-hold-tap";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      flavor = "hold-preferred"; 
+      bindings = <&mo DE_SHIFT_MAC>, <&kp X>;
+    };
+    
 };
 
 / {

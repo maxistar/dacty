@@ -65,7 +65,7 @@
 &kp GRAVE    &kp N1    &kp N2          &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp ESC
 &kp MINUS    &kp Q     &kp W           &kp E     &kp R     &kp T                      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp TAB
 &kp SQT      &kp A     &kp S           &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L    &kp SEMI &cycle_android
-&kp LSHFT    &kp Z     &shift_layer_ht &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp LSHFT    &kp Z     &shift_layer_x  &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
 &kp LALT     &kp LGUI  &kp LBKT        &kp SQT   &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &kp RBKT &kp BSPC &kp RALT
                                                     &kp LCTRL                  &kp RCTRL    
             >;
@@ -83,11 +83,11 @@
 
 
             bindings = <
-&shift_EQUAL &kp N1    &kp Y           &kp A       &kp Q     &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp ESC
-&kp FSLH     &kp Q     &kp W           &kp E       &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
-&shift_BSLH  &kp A     &kp S           &kp D       &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_lang_ru
-&mo DE_SHIFT &kp Y     &shift_layer_ht &kp C       &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT
-&kp LALT     &kp LGUI  &altgr_N8       &shift_BSLH &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &altgr_N9 &kp BSPC  &mo DE_RALT
+&shift_EQUAL &kp N1    &kp Y            &kp A       &kp Q     &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp ESC
+&kp FSLH     &kp Q     &kp W            &kp E       &kp R     &kp T                      &kp Z     &kp U     &kp I     &kp O     &kp P     &kp TAB
+&shift_BSLH  &kp A     &kp S            &kp D       &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L     &shift_COMMA  &cycle_lang_ru
+&mo DE_SHIFT &kp Y     &shift_layer_x_m &kp C       &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT   &shift_N7 &mo DE_SHIFT
+&kp LALT     &kp LGUI  &altgr_N8        &shift_BSLH &kp SPACE &mo LOWER                  &mo MAGIC &trans    &kp SPACE &altgr_N9 &kp BSPC  &mo DE_RALT
                                                        &kp LCTRL                  &kp RCTRL    
             >;
         };
