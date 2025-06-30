@@ -53,7 +53,7 @@
       flavor = "hold-preferred"; 
       bindings = <&mo DE_SHIFT_MAC>, <&kp X>;
     };
-    
+  };    
 };
 
 / {
