@@ -46,7 +46,7 @@
       bindings = <&mo DE_SHIFT>, <&kp X>;
     };
     
-    shift_layer_x_m: shift_layer_x {
+    shift_layer_x_m: shift_layer_x_m {
       compatible = "zmk, behavior-hold-tap";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
