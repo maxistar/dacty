@@ -36,12 +36,12 @@
         combo_delete {
             timeout-ms = <50>;
             key-positions = <43 44>;
-            bindings = <&kp RET>;
+            bindings = <&kp BSPC>;
         };
         combo_left_delete {
             timeout-ms = <50>;
             key-positions = <39 40>;
-            bindings = <&kp RET>;
+            bindings = <&kp BSPC>;
         };
     };
 };
