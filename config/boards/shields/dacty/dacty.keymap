@@ -264,16 +264,16 @@
 
         german_ralt_layer_mac {
 // ------------------------------------------------------------------------------------------------------------
-// |  ~    |  1  |  @  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
+// |  ~    |  !  |  @  |  #   |  $   |  %   |                   |  6   |  7    |  8    |  9   |   0   | ESC   |
 // |  =    |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  Ö   |   P   | TAB   |
-// |  '    |  Ä  |  ß  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
+// |  ´    |  ä  |  ß  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | CAPS  |
 // |       |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   |       |
 // | ALT   | CTRL| "<" | CTRL | LOWER|      |                   | ENTER| RAISE | CTRL  | ">"  |  BSPC | RALT  |
 // |       |     |     |      |      | GUI  |                   | GUI  |       |       |      |       |       |
             bindings = <
 &alt_N       &shift_N1  &altgr_l_for_at &kp BSLH  &shift_N4 &shift_N5                  &kp N6    &kp N7    &kp N8    &kp N9       &kp N0   &kp ESC
 &shift_N0    &kp Q      &kp W           &kp E     &kp R     &kp T                      &kp Y     &kp LBKT  &kp I     &kp SEMI     &kp P    &alt_TAB
-&kp SQT      &kp SQT    &kp MINUS       &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L        &kp SEMI &kp CAPS
+&kp EQUAL    &kp SQT    &kp MINUS       &kp D     &kp F     &kp G                      &kp H     &kp J     &kp K     &kp L        &kp SEMI &kp CAPS
 &kp LSHFT    &kp Z      &kp X           &kp C     &kp V     &kp B                      &kp N     &kp M     &kp COMMA &kp DOT      &kp FSLH &kp RSHFT
 &kp LALT     &kp LGUI   &kp GRAVE       &kp LCTRL &trans    &trans                     &trans    &trans    &kp RGUI  &shift_GRAVE &kp DEL  &kp RALT
                                                             &kp LCTRL                  &kp RCTRL      
