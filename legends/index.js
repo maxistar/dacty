@@ -1,7 +1,8 @@
 // keyboard stickers generator for waterslide paper
+// https://chatgpt.com/g/g-p-679b3a422b848191b349812edf555098-electronics/c/68ee9a43-9e38-8329-987f-b4d3cfc47f8e
 // npm i canvas
 import fs from "fs";
-import { createCanvas, registerFont } from "canvas";
+import { createCanvas, registerFont, loadImage } from "canvas";
 
 /** ========== CONFIG ========== */
 const CONFIG = {
@@ -22,7 +23,24 @@ const CONFIG = {
         cropMarks: "#444",
         debugCellOutline: null, // например "#bbb"
     },
+
+    textColorsByPos: {           // NEW: глобальные цвета по позициям
+        bottomLeft:  "#00AEEF",    // голубой
+        bottomRight: "#2ECC71",    // зелёный
+        // при желании можно задать и для других:
+        // topLeft: "#...", topRight: "#...", center: "#..."
+    },
+    
+    // Настройки иконок по умолчанию
+    icons: {
+        defaultWidthMM: 6,      // если не задан размер — ширина 6мм, высота по пропорции
+        opacity: 1.0,
+        rotationDeg: 0,
+    },
+
 };
+
+
 
 /** Позиции текста в долях от размеров наклейки (0..1) */
 const POS = {
@@ -46,9 +64,9 @@ const LAYOUT = [
     // Ряд 1 — добавим несколько 1.5u: Esc, Backspace
     [
         { u: 1.5, legends: ["`","ё"], positions: ["center","bottomLeft"] },
-        { legends: ["1", "!", "🐧"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
-        { legends: ["2", "@", "🍎"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
-        { legends: ["3", "#", "bt3"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
+        { legends: ["1", "!"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/linux-logo-penguin.png", pos: "bottomRight", widthMM: 4 }  },
+        { legends: ["2", "@"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/apple_rainbow.png", pos: "bottomRight", widthMM: 4 }  },
+        { legends: ["3", "#"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/android-logo.png", pos: "bottomRight", widthMM: 4 } },
         { legends: ["4", "€", "bt4"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
         { legends: ["5", "%", "bt5"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
         { legends: ["6", "^"], positions: ["bottomLeft", "topLeft"] },
@@ -86,7 +104,7 @@ const LAYOUT = [
         { legends: ["K","↑","л"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["L","→","д"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["P","з"], positions: ["center","bottomLeft"] },
-        { u: 1.5,legends: ["🌐"], positions: ["center"] },
+        { u: 1.5,legends: [], positions: [], icon: { src: "images/globe.png", pos: "center", widthMM: 5 } },
     ],
     // Ряд 4 — Shift 1.5u слева и справа
     [
@@ -107,12 +125,12 @@ const LAYOUT = [
     [
         { u: 1, legends: ["Fn", "F1", "↯"], positions: ["topLeft", "topRight", "bottomCenter"] },
         { u: 1, legends: ["Alt","⌥"], positions: ["center","topRight"] },
-        { u: 1, legends: ["Win"], positions: ["center"] },
+        { u: 1, legends: [], positions: [], icon: { src: "images/windows.png", pos: "center", widthMM: 5 }  },
         { u: 1, legends: [" "], positions: ["center"] },
         { u: 1, legends: ["[","х"], positions: ["center","bottomLeft"] },
         { u: 1, legends: ["]","ъ"], positions: ["center","bottomLeft"] },
-        { u: 1, legends: ["Lower"], positions: ["center"] },
-        { u: 1, legends: ["Raise"], positions: ["center"] },
+        { u: 1, legends: ["Lower"], positions: ["center"], textColors: {center:  "#00AEEF"} },
+        { u: 1, legends: ["Raise"], positions: ["center"], textColors: {center:  "#2ECC71"} },
         { u: 1, legends: ["⇦"], positions: ["center"] },
         { u: 1, legends: ["Ctrl","⌘"], positions: ["center","topRight"] },
         { u: 1, legends: [" "], positions: ["center"] },
@@ -166,8 +184,76 @@ function measureRowWidthPx(row, cellW, gapX) {
     return width;
 }
 
+/** ===== ИКОНОЧКИ! ===== */
+const iconCache = new Map(); // src -> Image
+
+async function getIcon(src) {
+    if (!src) return null;
+    if (iconCache.has(src)) return iconCache.get(src);
+    const img = await loadImage(src);
+    iconCache.set(src, img);
+    return img;
+}
+
+/** Рисует одну иконку с настройками */
+async function drawIcon(ctx, keyRect, iconCfg, cfg) {
+    const { x, y, w, h } = keyRect;      // пиксели
+    const { page, icons: defIcon } = cfg;
+    const dpi = page.dpi;
+
+    const img = await getIcon(iconCfg.src);
+    if (!img) return;
+
+    // позиция
+    const [rx, ry] = POS[iconCfg.pos || "center"] || POS.center;
+    const cx = x + rx * w;
+    const cy = y + ry * h;
+
+    // размер:
+    // 1) приоритет явным мм (widthMM / heightMM)
+    // 2) потом относительный от ширины/высоты (widthRel / heightRel)
+    // 3) иначе — дефолтная ширина из мм, высота по пропорции
+    let drawW, drawH;
+
+    if (iconCfg.widthMM || iconCfg.heightMM) {
+        if (iconCfg.widthMM) {
+            drawW = mmToPx(iconCfg.widthMM, dpi);
+            drawH = (img.height / img.width) * drawW;
+        }
+        if (iconCfg.heightMM) {
+            drawH = mmToPx(iconCfg.heightMM, dpi);
+            drawW = (img.width / img.height) * drawH;
+        }
+    } else if (iconCfg.widthRel || iconCfg.heightRel) {
+        if (iconCfg.widthRel) {
+            drawW = w * iconCfg.widthRel; // доля ширины клавиши
+            drawH = (img.height / img.width) * drawW;
+        }
+        if (iconCfg.heightRel) {
+            drawH = h * iconCfg.heightRel; // доля высоты клавиши
+            drawW = (img.width / img.height) * drawH;
+        }
+    } else {
+        drawW = mmToPx(defIcon.defaultWidthMM, dpi);
+        drawH = (img.height / img.width) * drawW;
+    }
+
+    const alpha = iconCfg.opacity ?? defIcon.opacity ?? 1.0;
+    const rot = ((iconCfg.rotationDeg ?? defIcon.rotationDeg ?? 0) * Math.PI) / 180;
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.translate(cx, cy);
+    if (rot) ctx.rotate(rot);
+
+    // якорим по центру
+    ctx.drawImage(img, -drawW / 2, -drawH / 2, drawW, drawH);
+    ctx.restore();
+}
+
+
 /** Основной рендер */
-function renderStickers(layout, cfg) {
+async function renderStickers(layout, cfg) {
     const { widthMM, heightMM, dpi } = cfg.page;
     const pageW = mmToPx(widthMM, dpi);
     const pageH = mmToPx(heightMM, dpi);
@@ -237,14 +323,24 @@ function renderStickers(layout, cfg) {
             const legends = key.legends || [];
             const positions = key.positions || ["center"];
             const fontPx = chooseFontSizePx(legends.length, cfg);
-
-            ctx.fillStyle = cfg.colors.text;
             setFontPx(ctx, fontPx, cfg.fonts.family);
 
             for (let i = 0; i < legends.length; i++) {
                 const text = String(legends[i]);
                 const posName = positions[i] || "center";
                 const [rx, ry] = POS[posName] || POS.center;
+
+                const perKeyMap = key.textColors || {}; // { bottomLeft: "#..", ... } или массив индексов
+                const colorFromKey =
+                    perKeyMap[posName] ??
+                    perKeyMap[i]; // допускаем и обращение по индексу
+                const color =
+                    colorFromKey ??
+                    (CONFIG.textColorsByPos ? CONFIG.textColorsByPos[posName] : null) ??
+                    CONFIG.colors.text;
+
+                ctx.fillStyle = color;     // ← теперь цвет на каждую подпись
+
 
                 const tx = xCursor + rx * keyW;
                 const ty = y + ry * cellH;
@@ -261,6 +357,17 @@ function renderStickers(layout, cfg) {
                 ctx.restore();
             }
 
+            // иконка/иконки
+            const rect = { x: xCursor, y, w: keyW, h: cellH };
+            if (key.icon) {
+                await drawIcon(ctx, rect, key.icon, CONFIG);
+            }
+            if (Array.isArray(key.icons)) {
+                for (const ic of key.icons) {
+                    await drawIcon(ctx, rect, ic, CONFIG);
+                }
+            }
+            
             // сместимся к следующей клавише
             xCursor += keyW;
             if (c < row.length - 1) xCursor += gapX; // межклавишный зазор
@@ -274,9 +381,9 @@ function renderStickers(layout, cfg) {
 }
 
 /** ============================== MAIN ============================== */
-(function main() {
+(async function main() {
     // при необходимости: registerFont('/abs/path/MyFont.ttf', { family: 'MyFont' });
-    const canvas = renderStickers(LAYOUT, CONFIG);
+    const canvas = await renderStickers(LAYOUT, CONFIG);
 
     const out = fs.createWriteStream("stickers_a4.png");
     const stream = canvas.createPNGStream();
