@@ -27,7 +27,10 @@ const CONFIG = {
 
     textColorsByPos: {           // NEW: глобальные цвета по позициям
         bottomLeft:  "#00AEEF",    // голубой
-        bottomRight: "#2ECC71",    // зелёный
+        bottomRight: "#00CC71",    // зелёный
+        center: "#FF00FF",    // зелёный
+        topLeft: "#FF0000",    // зелёный
+        topRight: "#00FFFF",    // зелёный
         // при желании можно задать и для других:
         // topLeft: "#...", topRight: "#...", center: "#..."
     },
@@ -82,7 +85,7 @@ const LAYOUT = [
         { legends: ["8", "*","F8"], positions: ["bottomLeft", "topLeft","topRight"] },
         { legends: ["9", "(","F9"], positions: ["bottomLeft", "topLeft","topRight"] },
         { legends: ["0", ")","F10"], positions: ["bottomLeft", "topLeft","topRight"] },
-        { u: 1.5, legends: ["esc","F11"], positions: ["bottomLeft","topRight"], textColors: {bottomLeft:"#000000"} },
+        { u: 1.5, legends: ["esc","F11"], positions: ["bottomLeft","topRight"], textColors: {bottomLeft:"#FF0000"} },
     ],
     // Ряд 2 — Tab 1.5u, Enter 1.5u
     [
