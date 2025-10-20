@@ -3,6 +3,7 @@
 // npm i canvas
 import fs from "fs";
 import { createCanvas, registerFont, loadImage } from "canvas";
+import sharp from "sharp";
 
 /** ========== CONFIG ========== */
 const CONFIG = {
@@ -38,6 +39,13 @@ const CONFIG = {
         rotationDeg: 0,
     },
 
+    output: {
+        cmykNoK: true,                       // генерировать CMYK TIFF без K
+        iccPath: null,                       // опционально: путь к ICC (например ISOcoated_v2_300_eci.icc)
+        tiffName: "stickers_a4_cmyk_noK.tiff",
+        tiffCompression: "lzw",              // "lzw" | "none" | "deflate" | "jpeg"
+    },
+    
 };
 
 
@@ -63,22 +71,22 @@ const POS = {
 const LAYOUT = [
     // Ряд 1 — добавим несколько 1.5u: Esc, Backspace
     [
-        { u: 1.5, legends: ["`","ё"], positions: ["center","bottomLeft"] },
-        { legends: ["1", "!"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/linux-logo-penguin.png", pos: "bottomRight", widthMM: 4 }  },
-        { legends: ["2", "@"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/apple_rainbow.png", pos: "bottomRight", widthMM: 4 }  },
-        { legends: ["3", "#"], positions: ["bottomLeft", "topLeft"], icon: { src: "images/android-logo.png", pos: "bottomRight", widthMM: 4 } },
-        { legends: ["4", "€", "bt4"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
-        { legends: ["5", "%", "bt5"], positions: ["bottomLeft", "topLeft", "bottomRight"] },
-        { legends: ["6", "^"], positions: ["bottomLeft", "topLeft"] },
-        { legends: ["7", "&"], positions: ["bottomLeft", "topLeft"] },
-        { legends: ["8", "*"], positions: ["bottomLeft", "topLeft"] },
-        { legends: ["9", "("], positions: ["bottomLeft", "topLeft"] },
-        { legends: ["0", ")"], positions: ["bottomLeft", "topLeft"] },
-        { u: 1.5, legends: ["ESC"], positions: ["center"] },
+        { u: 1.5, legends: ["`","ё","F12"], positions: ["center","bottomLeft","topRight"] },
+        { legends: ["1", "!","F1"], positions: ["bottomLeft", "topLeft","topRight"], icon: { src: "images/linux-logo-penguin.png", pos: "bottomRight", widthMM: 4 }  },
+        { legends: ["Z","я","@","F2"], positions: ["center","bottomLeft","topLeft","topRight"], icon: { src: "images/apple_rainbow.png", pos: "bottomRight", widthMM: 4 }  },
+        { legends: ["A","ф","#","F3"], positions: ["center","bottomLeft","topLeft","topRight"], icon: { src: "images/android-logo.png", pos: "bottomRight", widthMM: 4 } },
+        { legends: ["Q","й", "ᛒ4","$","F4"], positions: ["center","bottomLeft", "bottomRight","topLeft","topRight"] },
+        { legends: ["5", "%", "ᛒ5","F5"], positions: ["bottomLeft", "topLeft", "bottomRight","topRight"] },
+        { legends: ["6", "^","F6"], positions: ["bottomLeft", "topLeft","topRight"] },
+        { legends: ["7", "&","F7"], positions: ["bottomLeft", "topLeft","topRight"] },
+        { legends: ["8", "*","F8"], positions: ["bottomLeft", "topLeft","topRight"] },
+        { legends: ["9", "(","F9"], positions: ["bottomLeft", "topLeft","topRight"] },
+        { legends: ["0", ")","F10"], positions: ["bottomLeft", "topLeft","topRight"] },
+        { u: 1.5, legends: ["esc","F11"], positions: ["bottomLeft","topRight"], textColors: {bottomLeft:"#000000"} },
     ],
     // Ряд 2 — Tab 1.5u, Enter 1.5u
     [
-        { u: 1.5, legends: ["-"], positions: ["center"] },
+        { u: 1.5, legends: ["-","_"], positions: ["center","topLeft"] },
         { legends: ["Q","й"], positions: ["center","bottomLeft"] },
         { legends: ["W","1","ц"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["E","2","у"], positions: ["center","bottomRight","bottomLeft"] },
@@ -93,7 +101,7 @@ const LAYOUT = [
     ],
     // Ряд 3 — Caps 1.5u, два 1.5u посередине
     [
-        { u: 1.5, legends: ["'","э"], positions: ["center","bottomLeft"] },
+        { u: 1.5, legends: ["'","э","\""], positions: ["center","bottomLeft","topLeft"] },
         { legends: ["A","ф"], positions: ["center","bottomLeft"] },
         { legends: ["S","4","ы"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["D","5","в"], positions: ["center","bottomRight","bottomLeft"] },
@@ -104,11 +112,11 @@ const LAYOUT = [
         { legends: ["K","↑","л"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["L","→","д"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["P","з"], positions: ["center","bottomLeft"] },
-        { u: 1.5,legends: [], positions: [], icon: { src: "images/globe.png", pos: "center", widthMM: 5 } },
+        { u: 1.5,legends: ["ru","en"], positions: ["bottomLeft", "bottomRight"],  textColors: {bottomLeft:  "#00AEEF", bottomRight: "#000000"}, icon: { src: "images/globe.png", pos: "center", widthMM: 5 } },
     ],
     // Ряд 4 — Shift 1.5u слева и справа
     [
-        { u: 1.5, legends: ["Shift"], positions: ["center"] },
+        { u: 1.5, legends: ["⇧"], positions: ["center"] },
         { legends: ["Z","я"], positions: ["center","bottomLeft"] },
         { legends: ["X","7","ч"], positions: ["center","bottomRight","bottomLeft"] },
         { legends: ["C","8","с"], positions: ["center","bottomRight","bottomLeft"] },
@@ -119,23 +127,23 @@ const LAYOUT = [
         { legends: [",","б"], positions: ["center","bottomLeft"] },
         { legends: [".","ю"], positions: ["center","bottomLeft"] },
         { legends: ["P","з"], positions: ["center","bottomLeft"] },
-        { u: 1.5, legends: ["Shift"], positions: ["center"] },
+        { u: 1.5, legends: ["⇧"], positions: ["center"] },
     ],
     // Ряд 5 — Alt, Win, Space 1.5u, AltGr 1.5u, Menu 1.5u — добьём до ~10 штук 1.5u
     [
-        { u: 1, legends: ["Fn", "F1", "↯"], positions: ["topLeft", "topRight", "bottomCenter"] },
+        { u: 1, legends: ["Ctrl","⌘"], positions: ["center","topRight"] },
         { u: 1, legends: ["Alt","⌥"], positions: ["center","topRight"] },
         { u: 1, legends: [], positions: [], icon: { src: "images/windows.png", pos: "center", widthMM: 5 }  },
         { u: 1, legends: [" "], positions: ["center"] },
         { u: 1, legends: ["[","х"], positions: ["center","bottomLeft"] },
         { u: 1, legends: ["]","ъ"], positions: ["center","bottomLeft"] },
-        { u: 1, legends: ["Lower"], positions: ["center"], textColors: {center:  "#00AEEF"} },
+        { u: 1, legends: ["Lower"], positions: ["center"], textColors: {} },
         { u: 1, legends: ["Raise"], positions: ["center"], textColors: {center:  "#2ECC71"} },
         { u: 1, legends: ["⇦"], positions: ["center"] },
         { u: 1, legends: ["Ctrl","⌘"], positions: ["center","topRight"] },
         { u: 1, legends: [" "], positions: ["center"] },
         { u: 1, legends: ["'"], positions: ["center"] },
-        { u: 1, legends: ["AltGr"], positions: ["center"] },
+        { u: 1, legends: ["AltGr","⌥"], positions: ["center","topLeft"] },
     ],
 ];
 
@@ -391,4 +399,5 @@ async function renderStickers(layout, cfg) {
     out.on("finish", () => {
         console.log("✅ Готово: stickers_a4.png");
     });
+    
 })();
