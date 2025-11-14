@@ -1,5 +1,7 @@
 $fn = 50;
 
+
+module connector_holder () {
 difference() {
     
   union() {  
@@ -38,6 +40,12 @@ translate([-3, -3, -6])
   switcher();
     
 }
+}
+
+
+
+connector_holder();
+
 
 
 
