@@ -58,15 +58,15 @@
         to_lower: to_lower {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&kp F18>,
-                     <&to LOWER>;
+          bindings = <&to LOWER>,
+                     <&kp F18>;
         };
 
         to_magic: to_magic {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&kp F19>,
-                     <&to MAGIC>;
+          bindings = <&to MAGIC>,
+                     <&kp F19>;
         };
 
         to_mac: to_mac {
