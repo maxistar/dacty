@@ -7,6 +7,11 @@ git clone https://github.com/maxistar/dacty.git
 cd dacty
 ```
 
+## Layout Helper
+
+Use Keyboard Layout Helper to inspect and tune layers visually:
+https://projects.maxistar.me/keyboard_helper/
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (LTS)
