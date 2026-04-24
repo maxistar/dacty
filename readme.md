@@ -7,6 +7,10 @@ git clone https://github.com/maxistar/dacty.git
 cd dacty
 ```
 
+## Related Projects
+
+- Corney: https://github.com/maxistar/corney
+
 ## Layout Helper
 
 Use Keyboard Layout Helper to inspect and tune layers visually:
